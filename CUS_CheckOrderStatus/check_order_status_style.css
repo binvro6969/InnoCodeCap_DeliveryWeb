@@ -219,6 +219,7 @@ ul {
 
 
 /* NAVBAR */
+
 #content nav {
 	height: 56px;
 	background: var(--light);
@@ -257,6 +258,7 @@ ul {
 #content nav .nav-link {
 	font-size: 16px;
 	transition: .3s ease;
+	width: 50%;
 }
 
 #content nav .nav-link:hover {
@@ -266,8 +268,9 @@ ul {
 #content nav form {
 	max-width: 400px;
 	width: 100%;
-	margin-right: 27%;
-	margin-left: 26%;
+	margin-right: 20%;
+    margin-left: 2%;
+	visibility: hidden;
 }
 
 #content nav form .form-input {
@@ -341,6 +344,7 @@ ul {
 	background: var(--grey);
 	cursor: pointer;
 	position: relative;
+	visibility: hidden;
 }
 
 #content nav .switch-mode::before {
@@ -354,14 +358,28 @@ ul {
 	border-radius: 50%;
 	transition: all .3s ease;
 }
-
-#content nav #switch-mode:checked+.switch-mode::before {
+#content nav #switch-mode:checked + .switch-mode::before {
 	left: calc(100% - (25px - 4px) - 2px);
 }
 
+
+#content nav select {
+	width: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: white;
+	color: var(---body-text-color);
+	font-size: 18px;
+	outline: none;
+	border-radius: 20px;
+	cursor: pointer;
+	text-align: center;
+}
+
+
+
 /* NAVBAR */
-
-
 
 
 #content main {

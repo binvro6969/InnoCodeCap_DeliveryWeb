@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', (event) => {
   
     // Sidebar and form functionality
-    const allSideMenu = document.querySelectorAll('#sidebar .side-menu.top li a');
+    
     const newMemberAddBtn = document.querySelector('.addMemberBtn');
     const editInforBtn = document.querySelector('.editinforBtn');
     const viewInforBtn = document.querySelector('.viewInforBtn');
@@ -23,16 +23,28 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const overlay = document.getElementById('overlay');
     const content = document.querySelector('.content');
 
-    allSideMenu.forEach(item => {
-        const li = item.parentElement;
+// Sidebar and form functionality
+const currentPath = window.location.pathname.split('/').pop();
 
-        item.addEventListener('click', function () {
-            allSideMenu.forEach(i => {
-                i.parentElement.classList.remove('active');
-            })
-            li.classList.add('active');
+// Lấy tất cả các thẻ a trong menu
+const allSideMenu = document.querySelectorAll('#sidebar .side-menu.top li a');
+
+// Duyệt qua các thẻ a và kiểm tra href
+allSideMenu.forEach(item => {
+    const li = item.parentElement;
+    const itemPath = item.getAttribute('href').split('/').pop();
+
+    if (itemPath === currentPath) {
+        li.classList.add('active');
+    }
+
+    item.addEventListener('click', function () {
+        allSideMenu.forEach(i => {
+            i.parentElement.classList.remove('active');
         });
+        li.classList.add('active');
     });
+});
 
     // Toggle sidebar
     const menuBar = document.querySelector('#content nav .bx.bx-menu');
