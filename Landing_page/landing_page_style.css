@@ -338,20 +338,27 @@ header {
   margin-bottom: 30px;
   height: 100vh;
 }
-.sec-1 h5{
+.sec-1 h4{
   color: #7c7c7c;
+  gap: 2em;
+}
+
+.hero_title h1{
+  font-weight: 700;
 }
 
 section .animate , .animate-1, .animate-2, .animate-3, .animate-4{
   transition: 1s;
 }
 
+
+
 .sec-1 .hero .hero_title h1{
   font-size: 3em;
   font-weight: 400;
 }
 .sec-1 .hero .hero_title h1.animate{
-  transform: translateX(-100px);
+  transform: translateX(300px);
 }
 
 .sec-1.show-animate .hero .hero_title h1.animate{
@@ -359,7 +366,7 @@ section .animate , .animate-1, .animate-2, .animate-3, .animate-4{
 }
 
 .sec-1 .hero .hero_title ul.animate{
-  transform: translateX(-100px);
+  transform: translateX(500px);
 }
 
 .sec-1.show-animate .hero .hero_title ul.animate{
@@ -367,7 +374,7 @@ section .animate , .animate-1, .animate-2, .animate-3, .animate-4{
 }
 
 .sec-1 .hero .div_img img.animate{
-  transform: translateX(100px);
+  transform: translateX(-300px);
 }
 
 .sec-1.show-animate .hero .div_img img.animate{
