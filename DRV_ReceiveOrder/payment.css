@@ -577,7 +577,8 @@ main.table {
   
   .reiceve_card .form {
     display: grid;
-    gap: 2em;
+    gap: 1.5em;
+	
   }
   
    

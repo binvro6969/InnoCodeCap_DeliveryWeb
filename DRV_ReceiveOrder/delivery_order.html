@@ -20,52 +20,53 @@
 <body>
 
     <section class="confiq">
+        
         <!-- SIDEBAR -->
         <section id="sidebar">
-            <a href="#" class="brand">
-                <i class='bx bxs-package'></i>
-                <span class="text">DN Express</span>
-                <!-- <img src="img/logopage1.png"> -->
+          <a href="#" class="brand">
+              <i class='bx bxs-package'></i>
+              <span class="text">DN Express</span>
+              <!-- <img src="img/logopage1.png"> -->
 
-            </a>
-            <ul class="side-menu top">
-                <li >
-                  <a href="../DRV_ReceiveOrder/Receive_order.html">
-                    <i class='bx bxs-package'></i>
-                    <span class="text">Receive Order</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="../DRV_ManageWallet/Scr_viewDriverWallet_viewDriverWallet.html">
-                    <i class='bx bxs-truck'></i>
-                    <span class="text">Manage Wallet</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="../DRV_Statistic/Scr_DriverStatistic.html">
-                    <i class='bx bxs-doughnut-chart' ></i>
-                    <span class="text">Driver Statistic</span>
-                  </a>
-                </li>
-              </ul>
-              
-              <ul class="side-menu" style="position: absolute; bottom: 0;">
-                <li>
-                    <a href="#">
-                        <i class='bx bxs-cog'></i>
-                        <span class="text">Settings</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="logout">
-                        <i class='bx bxs-log-out-circle'></i>
-                        <span class="text">Logout</span>
-                    </a>
-                </li>
-            </ul>
-            
-        </section>
-        <!-- SIDEBAR -->
+          </a>
+          <ul class="side-menu top">
+            <li >
+              <a href="../DRV_ReceiveOrder/Receive_order.html">
+                <i class='bx bxs-package'></i>
+                <span class="text">Receive Order</span>
+              </a>
+            </li>
+            <li>
+              <a href="../DRV_ManageWallet/Scr_viewDriverWallet_viewDriverWallet.html">
+                <i class='bx bxs-truck'></i>
+                <span class="text">Manage Wallet</span>
+              </a>
+            </li>
+            <li>
+              <a href="../DRV_Statistic/Scr_DriverStatistic.html">
+                <i class='bx bxs-doughnut-chart' ></i>
+                <span class="text">Driver Statistic</span>
+              </a>
+            </li>
+          </ul>
+          
+          <ul class="side-menu" style="position: absolute; bottom: 0;">
+            <li>
+                <a href="../ALL_EditProfile/Scr_EditProfile_EditProfileDriver.html">
+                    <i class='bx bxs-cog'></i>
+                    <span class="text">Settings</span>
+                </a>
+            </li>
+            <li>
+                <a href="../index.html" class="logout">
+                    <i class='bx bxs-log-out-circle'></i>
+                    <span class="text">Logout</span>
+                </a>
+            </li>
+        </ul>
+        
+      </section>
+      <!-- SIDEBAR -->
 
 
 
@@ -171,8 +172,8 @@
                           </div>
                       
                           <div class="btn_choose">
-                            <button class="btn_arrived button--full" type="submit" >Arrived</button>
-                            <button class="btn_cancel button--full" type="submit" >Cancel</button>
+                            <button class="btn_arrived button--full" id="arrived_btn" type="button" >Arrived</button>
+                            <button class="btn_cancel button--full" id="cancel_btn"  type="button" >Cancel</button>
                           </div>
                         </form>
                       </div>
@@ -216,6 +217,16 @@
         <p>&copy;2024 D04 R02 | All Rights Reserved</p>
     </footer>
     <!-- FOOTER -->
+    <script>
+      document.getElementById('cancel_btn').addEventListener('click', function() {
+         window.location.href = '../DRV_ReceiveOrder/Receive_order.html'; 
+     });
+
+     document.getElementById('arrived_btn').addEventListener('click', function() {
+             window.location.href = '../DRV_ReceiveOrder/payment.html'; 
+         });
+   </script>  
+
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="delivery_order.js"></script>

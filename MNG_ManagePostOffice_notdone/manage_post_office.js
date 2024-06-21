@@ -92,7 +92,7 @@ viewButtons.forEach(button => {
 });
 
 function redirectToPage() {
-    window.location.href = "result.html"; 
+    window.location.href = "../MNG_ManagePostOffice_notdone/Review_ie_ticket.html"; 
 }
 
 });

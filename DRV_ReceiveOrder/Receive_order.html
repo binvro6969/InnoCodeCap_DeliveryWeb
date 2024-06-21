@@ -51,13 +51,13 @@
             
             <ul class="side-menu" style="position: absolute; bottom: 0;">
               <li>
-                  <a href="#">
+                  <a href="../ALL_EditProfile/Scr_EditProfile_EditProfileDriver.html">
                       <i class='bx bxs-cog'></i>
                       <span class="text">Settings</span>
                   </a>
               </li>
               <li>
-                  <a href="#" class="logout">
+                  <a href="../index.html" class="logout">
                       <i class='bx bxs-log-out-circle'></i>
                       <span class="text">Logout</span>
                   </a>
@@ -172,9 +172,11 @@
                           </div>
                       
                           <div class="btn_choose">
-                            <button class="btn_reject button--full" type="submit" >Reject</button>
-                            <button class="btn_accept button--full" type="submit" >Accept</button>
+                            <button class="btn_reject button--full" id="reject_btn" type="button" >Reject</button>
+
+                            <button class="btn_accept button--full" id="accept_btn" type="button" >Accept</button>
                           </div>
+                          
                         </form>
                       </div>
                     
@@ -217,6 +219,17 @@
         <p>&copy;2024 D04 R02 | All Rights Reserved</p>
     </footer>
     <!-- FOOTER -->
+    <script>
+    
+    document.getElementById('accept_btn').addEventListener('click', function() {
+            window.location.href = '../DRV_ReceiveOrder/process_order.html'; 
+        });
+
+    document.getElementById('reject_btn').addEventListener('click', function() {
+            window.location.href = '#'; 
+        });
+  </script>
+
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="Receive_order.js"></script>
